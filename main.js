@@ -71,6 +71,7 @@ const botonesCategorias = document.querySelectorAll(".filtro");
 const abrirMenu = document.querySelector("#open");
 const cerrarMenu = document.querySelector("#close");
 const productos2 = document.querySelector("#agregar");
+const active = document.querySelector(".boton-categoria");
 
 
 
@@ -89,11 +90,15 @@ function cargarAlHtml(productosEnHtml) {
       productosHtml.append(div);  
    })
    actualizarBoton();
+   
 }
 cargarAlHtml(productos);
 
 botonesCategorias.forEach(boton => {
    boton.addEventListener("click", (e) => {
+      botonesCategorias.forEach(boton => boton.classList.remove("active"));
+      e.currentTarget.classList.add("active");
+
       if (e.currentTarget.id != "todas") {
          const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
          cargarAlHtml(productosBoton);
@@ -155,7 +160,6 @@ function actualizarNumerito() {
       numerito.innerText = nuevoNumero;
       numerito2.innerText = nuevoNumero;
 }
-
 
 abrirMenu.addEventListener("click", () =>{
    productos2.classList.add("categorias-visible");

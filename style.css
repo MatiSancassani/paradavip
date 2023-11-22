@@ -129,26 +129,7 @@ main .articulo {
     border: 2px solid red;    
     border-radius: 10% / 50%;
 }
-.resumen-compras {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1rem;
-    color: black;
-}
-.cantidad-total,
-.total {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.cantidad-total {
-    background: black;
-    padding: 1rem;
-    color: white;
-    border-radius: 10% / 50%;
-}
+
 /* Footer */
 
 .footer {
@@ -175,6 +156,26 @@ main .articulo {
 
 
 /* Carrito */
+.resumen-compras {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    color: black;
+}
+.cantidad-total,
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cantidad-total {
+    background: black;
+    padding: 1rem;
+    color: white;
+    border-radius: 10% / 50%;
+}
 .carrito-class {
     background: white;
     margin: 2rem;
@@ -208,15 +209,60 @@ main .articulo {
 .general {      
     background: rgb(224, 224, 224);
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    padding: .5rem;
     gap: 1rem;
-    border: solid 1px black;
+    border: solid .0625rem black;
+    border-radius: 1.25rem;
 }
-
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10% / 50%;
+}
+.contenedor-comprar {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-comprar,
+.boton-vaciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    border: 1px solid black;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
 .mobile {
     display: none;
 }
+
+/* Clases active */
+
+.active {
+    background: red;
+    color: white;
+    border-radius: 10% / 50%;
+    border: .0625rem solid black;
+    padding: .5rem;
+}
+.active:hover {
+    color: white;
+}
+.disabled {
+    display: none;
+}
+
+
 
 @media screen and (max-width: 600px) {
     .categorias {
@@ -277,5 +323,11 @@ main .articulo {
     }
     header img {
         display: none;
+    }
+    .general {
+        flex-direction: column;  
+        justify-content: center;
+        align-items: center;
+        gap: 0;      
     }
 }

@@ -10,17 +10,17 @@
 </head>
 <body>
     <header class="mobile">
-        <button ><a href="./carrito.html"><i class="bi bi-cart2 class-button" ><small id="numerito-mobile" class="numerito-mobile">0</small></i></button></a>
-        <button id="open"><i class="bi bi-search class-button"></i></button>           
+        <button ><a href="./carrito.html"><i class="bi bi-cart2 class-button" ></i></button></a>
+        <button><a href="./index.html"><i class="bi bi-house-door"></i></button></a>       
     </header>
     <header>
         <div class="menu-principal">
-            <img class="logo" src="./img/logo.png" alt="">            
+            <a href="./index.html"><img class="logo" src="./img/logo.png" alt=""></a>    
         </div>
     </header>
     <main>
         <div class="carrito-class">
-            <h2 class="disabled carrito-vacio" id="vacio">Tu carrito esta vacio</h2>
+            <h2 class="carrito-vacio" id="vacio">Tu carrito se encuentra vacio</h2>
             <div id="carritoProductos" class="carrito-productos"> 
             </div>
             <div class="resumen-compras">
@@ -30,9 +30,13 @@
                 </div>
                 <div class="total">
                     <small>Total</small>
-                    <p>$</p>
-                </div>
-            </div>
+                    <p id="total">$2000</p>
+                </div> 
+            </div>      
+            <div class="contenedor-comprar">
+                <button id="accion-vaciar" class="boton-vaciar">Vaciar carrito</button>                   
+                <button class="boton-comprar">Comprar</button>
+            </div>  
         </div>
     </main>
     <script src="./carrito.js"></script>
