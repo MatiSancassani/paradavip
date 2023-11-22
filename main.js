@@ -2,7 +2,7 @@ const productos = [
    {
       id: "coca",
       nombre: "Coca Cola",
-      imagen: "./img/coca-medio.jpg",
+      imagen: "./img/coca-medio.png",
       descripcion: "Coca 500cc",
       precio: 530,
       categoria: {
@@ -13,7 +13,7 @@ const productos = [
    {
       id: "pepsi",
       nombre: "Pepsi",
-      imagen: "./img/pepsi-medio.jpeg",
+      imagen: "./img/pepsi-medio.png",
       descripcion: "Pepsi 500cc",
       precio: 530,
       categoria: {
